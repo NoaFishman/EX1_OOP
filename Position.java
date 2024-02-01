@@ -22,8 +22,8 @@ public class Position {
         }
     }
     public void setpiceToPos(ConcretePiece p){
-        if (piceatPos.getLast().equals(p)){
-            piceatPos.removeLast();
+        if (piceatPos.get(piceatPos.size()-1).equals(p)){
+            piceatPos.remove(piceatPos.size()-1);
 
         }
     }

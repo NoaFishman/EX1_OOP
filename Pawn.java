@@ -1,38 +1,17 @@
 public class Pawn extends ConcretePiece{
-private int kills=0;
-
-//    public Pawn(Player p, Position po) {
-//        this.owner=p;
-//        this.pos=po;
-//        this.steps.add(po);
-//
-//    }
-    public Pawn(ConcretePiece p) {
-        this.owner=p.getOwner();
-
-    }
-    public Pawn(Player p) {
-        this.owner = p;
-
-    }
-
-    @Override
-    public String toString() {
-        return null;
-    }
-
+    // pawn constractor that get a player an creat a new pawn
+    public Pawn(Player p) {this.owner = p;}
+    // add to the pawn the sn we got
     @Override
     public void addSN(int x) {
         this.sn=x;
     }
-
-
+    // return the typ of the pawn by his player
     public String getType (){
         if(owner.isPlayerOne())
             return "♙";
         else
             return "♟︎";
-
     }
 
 }
